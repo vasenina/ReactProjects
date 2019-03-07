@@ -1,0 +1,11 @@
+.ControlPanel{
+    width: 25%;
+    background-color: blue;
+    float: left;
+}
+
+.Tasks{
+    width: 75%;
+    float: left;
+}
+
