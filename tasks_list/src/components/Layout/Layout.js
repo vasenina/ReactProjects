@@ -2,6 +2,7 @@ import React from 'react';
 
 import Aux from '../../hoc/Aux';
 import classes from './Layout.module.css';
+import TasksOverview from '../../containers/TasksOverview';
 
 const layout = (props) =>(
   <Aux>
@@ -11,7 +12,8 @@ const layout = (props) =>(
                 <p>calender</p> 
             </div>
             <div className = {classes.Tasks}>
-                <p>Daily Tasks and weekly tasks</p>
+            <TasksOverview />
+            <p>Daily Tasks and weekly tasks</p>
             </div>
          </div>
     
