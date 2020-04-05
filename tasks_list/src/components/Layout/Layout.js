@@ -13,7 +13,6 @@ const layout = (props) =>(
             </div>
             <div className = {classes.Tasks}>
             <TasksOverview />
-            <p>Daily Tasks and weekly tasks</p>
             </div>
          </div>
     

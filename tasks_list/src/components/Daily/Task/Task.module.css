@@ -1,5 +1,12 @@
 .Task{
     width: 80%;
-    border: 1 px;
+    position: relative;
+    height: 60px;
+    border-radius: 16px;
+    border-width: thin;
+    padding: 8px;
+    border-color: black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 16px auto;
 
 }

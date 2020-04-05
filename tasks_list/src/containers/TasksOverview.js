@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import Dailylist from '../components/Daily/DailyList'
 import Aux from '../hoc/Aux';
+import classes from './TaskOverview.module.css'
 
 class TasksOverview extends Component{
 
@@ -22,7 +23,13 @@ class TasksOverview extends Component{
     render(){
         return(
         <Aux>
-        <Dailylist tasks = {this.state.tasks}/>
+            <div className = {classes.Daily}>
+                <p>Daily tasks</p>
+                <Dailylist tasks = {this.state.tasks}/>
+            </div>
+            <div className = {classes.Weekly}>
+                <p>Weekly tasks</p>
+            </div>
         </Aux>
         );
     }

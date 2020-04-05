@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div>
         <Layout>
-         There is a place for tasks
+         
         </Layout>
         
       </div>
