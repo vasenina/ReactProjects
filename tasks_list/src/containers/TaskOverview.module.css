@@ -1,0 +1,11 @@
+.Daily{
+    width: 60%;
+    background-color:lightgrey;
+    float: left;
+
+}
+
+.Weekly{
+    width: 40%;
+    float: left;
+}

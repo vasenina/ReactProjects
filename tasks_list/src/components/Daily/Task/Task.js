@@ -5,8 +5,9 @@ import classes from './Task.module.css';
 
 const task = (props) =>(
    
-        <div className = {classes.Task} style = {{background:'{props.color}'}} >
-            <p>{props.todo}</p>
+        <div className = {classes.Task} style = {{background: props.color}} >
+            <input type = "checkbox"/>
+            <span>{props.todo}</span>
         </div> 
   
 );

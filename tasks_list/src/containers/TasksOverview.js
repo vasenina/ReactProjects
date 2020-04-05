@@ -8,16 +8,15 @@ class TasksOverview extends Component{
 
     state={
         tasks:[
-            {id: 't1', todo: 'run 15  km', type: 'Sport', color: '#625cc9' },
-            {id: 't2', todo: '2 min plank', type: 'Sport', color: '#625cc9'},
-            {id: 't3', todo: 'Meeting with chef', type: 'Work', color: '50a7ec'},
+            {id: 't1', todo: 'run 15  km', type: 'sport', color: 'white' },
+            {id: 't2', todo: '2 min plank', type: 'sport', color: '#625cc9'},
+            {id: 't3', todo: 'Meeting with chef', type: 'work', color: '50a7ec'},
           ],
 
-          types:[
-            {id: 'typ1', type: 'Sport', color: '#625cc9'},
-            {id: 'typ2', type: 'Work', color: '50a7ec'},
-          ]
-       
+          types: {
+              sport: { color: '#625cc9'},
+              work: {color: '#50a7ec'},
+          }
     }
 
     render(){
@@ -25,7 +24,7 @@ class TasksOverview extends Component{
         <Aux>
             <div className = {classes.Daily}>
                 <p>Daily tasks</p>
-                <Dailylist tasks = {this.state.tasks}/>
+                <Dailylist tasks = {this.state.tasks} types= {this.state.types} />
             </div>
             <div className = {classes.Weekly}>
                 <p>Weekly tasks</p>
