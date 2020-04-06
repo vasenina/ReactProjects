@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
-import Dailylist from '../components/Daily/DailyList'
+import Dailylist from '../components/Daily/DailyList';
+import Date from '../components/Daily/Date/Date';
 import Aux from '../hoc/Aux';
 import classes from './TaskOverview.module.css'
 
@@ -19,11 +20,14 @@ class TasksOverview extends Component{
           }
     }
 
+    
+
     render(){
         return(
         <Aux>
             <div className = {classes.Daily}>
                 <p>Daily tasks</p>
+                <Date />
                 <Dailylist tasks = {this.state.tasks} types= {this.state.types} />
             </div>
             <div className = {classes.Weekly}>
