@@ -1,17 +1,55 @@
 .Task{
     width: 80%;
     position: relative;
-    border-radius: 16px;
-    border-width: thin;
+    border-radius: 12px;
+    border: thin solid gray;
     padding: 16px;
-    border-color: black;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     margin: 4px auto;
    }
 
 .Task:hover {
-    border-width: thick;
     box-shadow: 0 0 10px rgba(0,0,0,0.8);
 }
 
 
+
+input[type=checkbox], label{
+    vertical-align: middle;
+
+}
+
+
+input[type=checkbox]{
+   
+    cursor: pointer;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 7px; 
+}
+
+
+
+
+input[type='checkbox']:after {
+   
+    content: '';
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: rgb(224,224,224);
+    border: 1px solid rgb(224,224,224);
+    }
+
+input[type='checkbox']:checked:after {
+    content: '✔';
+   color: green;
+    text-align: center;
+    border: 1px solid rgb(224,224,224);
+    }
+
+
+input[type='checkbox']:hover:after {
+   
+       border: 1px solid green;
+    }

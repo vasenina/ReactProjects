@@ -7,7 +7,7 @@ const task = (props) =>(
    
         <div className = {classes.Task} style = {{background: props.color}} >
             <input type = "checkbox"/>
-            <span>{props.todo}</span>
+            <label > {props.todo} </label>
         </div> 
   
 );

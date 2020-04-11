@@ -11,7 +11,7 @@ class TasksOverview extends Component{
         tasks:[
             {id: 't1', todo: 'run 15  km', type: 'sport' },
             {id: 't2', todo: '2 min plank', type: 'sport'},
-            {id: 't3', todo: 'Meeting with chef', type: 'work'},
+            {id: 't3', todo: 'Meeting with chef jdghasjfghdbshjgfhbdhv hfgdskhb vhfdgdhdsvbsd hfdsgvhbsdfkhj', type: 'work'},
           ],
 
           types: {
