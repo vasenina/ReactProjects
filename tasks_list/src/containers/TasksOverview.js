@@ -9,9 +9,9 @@ class TasksOverview extends Component{
 
     state={
         tasks:[
-            {id: 't1', todo: 'run 15  km', type: 'sport' },
-            {id: 't2', todo: '2 min plank', type: 'sport'},
-            {id: 't3', todo: 'Meeting with chef jdghasjfghdbshjgfhbdhv hfgdskhb vhfdgdhdsvbsd hfdsgvhbsdfkhj', type: 'work'},
+            {id: 't1', todo: 'run 15  km', type: 'sport' , done: true},
+            {id: 't2', todo: '2 min plank', type: 'sport', done: false},
+            {id: 't3', todo: 'Meeting with chef jdghasjfghdbshjgfhbdhv hfgdskhb vhfdgdhdsvbsd hfdsgvhbsdfkhj', type: 'work', done: false},
           ],
 
           types: {

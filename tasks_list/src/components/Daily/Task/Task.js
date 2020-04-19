@@ -1,15 +1,24 @@
 import React from 'react';
 import classes from './Task.module.css';
+import { render } from 'react-dom';
 
 
 
-const task = (props) =>(
+const task = (props) =>{
    
-        <div className = {classes.Task} style = {{background: props.color}} >
-            <input type = "checkbox"/>
+    let classNames = classes.Task ;
+    let style = {};
+    (props.done) ? 
+      (classNames += ' ' + classes.Task_done ):
+      (style = {background: props.color});
+    
+    
+        return(
+        <div  className ={classNames} style = {style} >
+            <input type = "checkbox" checked = {props.done}/>
             <label > {props.todo} </label>
         </div> 
-  
-);
+        )
+};
 
 export default task;

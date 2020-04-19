@@ -12,6 +12,10 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.8);
 }
 
+.Task_done{
+    background: gray;
+    text-decoration: line-through;
+}
 
 
 input[type=checkbox], label{
