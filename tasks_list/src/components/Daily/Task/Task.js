@@ -15,7 +15,7 @@ const task = (props) =>{
     
         return(
         <div  className ={classNames} style = {style} >
-            <input type = "checkbox" checked = {props.done}/>
+            <input type = "checkbox" checked = {props.done} onClick = {props.check}/>
             <label > {props.todo} </label>
         </div> 
         )

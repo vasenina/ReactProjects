@@ -19,7 +19,20 @@ class TasksOverview extends Component{
               work: {color: '#50a7ec'},
           }
     }
-
+    
+    taskStatusChanged = (id) => {
+        this.setState(({tasks}) => {
+          return {
+              tasks: tasks.map((el) => {
+              if (el.id == id) {
+                return Object.assign({}, el, { done: !el.done})
+              } else {
+                 return el;
+              }
+          })
+        }
+        });
+      };
     
 
     render(){
@@ -28,7 +41,10 @@ class TasksOverview extends Component{
             <div className = {classes.Daily}>
                 <p>Daily tasks</p>
                 <Date />
-                <Dailylist tasks = {this.state.tasks} types= {this.state.types} />
+                <Dailylist 
+                    tasks = {this.state.tasks} 
+                    types= {this.state.types} 
+                    checked = {this.taskStatusChanged} />
             </div>
             <div className = {classes.Weekly}>
                 <p>Weekly tasks</p>
