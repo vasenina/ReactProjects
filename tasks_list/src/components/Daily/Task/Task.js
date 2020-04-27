@@ -1,10 +1,14 @@
 import React from 'react';
 import classes from './Task.module.css';
-import { render } from 'react-dom';
 
 
 
-const task = (props) =>{
+
+
+
+   
+const task = (props)=>{
+   
    
     let classNames = classes.Task ;
     let style = {};
@@ -14,11 +18,15 @@ const task = (props) =>{
     
     
         return(
-        <div  className ={classNames} style = {style} >
-            <input type = "checkbox" checked = {props.done} onClick = {props.check}/>
-            <label > {props.todo} </label>
-        </div> 
+               
+            <div  className ={classNames} style = {style} >
+                    <input type = "checkbox" checked = {props.done} onClick = {props.check}/>
+                    <label > {props.todo} </label>
+            </div>
+     
         )
+    
 };
 
 export default task;
+
