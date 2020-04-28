@@ -1,12 +1,7 @@
 import React from 'react';
 import classes from './Task.module.css';
 
-
-
-
-
-
-   
+ 
 const task = (props)=>{
    
    
@@ -19,7 +14,7 @@ const task = (props)=>{
     
         return(
                
-            <div  className ={classNames} style = {style} >
+            <div  className ={classNames} style = {style} onClick = {props.editing}>
                     <input type = "checkbox" checked = {props.done} onClick = {props.check}/>
                     <label > {props.todo} </label>
             </div>

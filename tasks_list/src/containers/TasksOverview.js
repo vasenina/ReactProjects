@@ -4,7 +4,8 @@ import Dailylist from '../components/Daily/DailyList';
 import Date from '../components/Daily/Date/Date';
 import Aux from '../hoc/Aux';
 import Modal from '../components/UI/Modal/Modal';
-import classes from './TaskOverview.module.css'
+import classes from './TaskOverview.module.css';
+import TaskEditForm from '../components/Daily/TaskEditForm/TaskEditForm';
 
 
 class TasksOverview extends Component{
@@ -20,7 +21,7 @@ class TasksOverview extends Component{
               sport: { color: '#625cc9'},
               work: {color: '#50a7ec'},
           },
-        taskediting: true,
+        taskediting: false,
     }
     
     editTaskHandler = () => {
@@ -52,6 +53,7 @@ class TasksOverview extends Component{
              <Modal 
                     show = {this.state.taskediting}
                     modalClosed = {this. editTaskCancelHandler}>
+                    <TaskEditForm todo ="tests text" />
                    <p>modal window test</p>
             </Modal>
             <div className = {classes.Daily}>
@@ -60,7 +62,8 @@ class TasksOverview extends Component{
                 <Dailylist 
                     tasks = {this.state.tasks} 
                     types= {this.state.types} 
-                    checked = {this.taskStatusChanged} />
+                    checked = {this.taskStatusChanged} 
+                    editing = {this.editTaskHandler}/>
             </div>
             <div className = {classes.Weekly}>
                 <p>Weekly tasks</p>
