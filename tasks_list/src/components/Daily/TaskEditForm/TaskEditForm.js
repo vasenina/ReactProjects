@@ -2,12 +2,12 @@ import React from 'react';
 import classes from './TaskEditForm.module.css';
 
  
-const taskeditform = (props)=>{
+const taskeditform = ({task})=>{
 
 
    return(
     <div>
-        <input type="text" value ={props.todo}/>
+        <input type="text" value ={task.todo} readOnly={true} />
     </div>
 
    )

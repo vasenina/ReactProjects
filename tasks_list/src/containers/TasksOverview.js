@@ -22,14 +22,21 @@ class TasksOverview extends Component{
               work: {color: '#50a7ec'},
           },
         taskediting: false,
+        taskEditId: 't1',
     }
     
-    editTaskHandler = () => {
-        this.setState({taskediting : true});
+    editTaskHandler = (id) => {
+        this.setState({taskediting : true , taskEditId: id});
+
     }
 
     editTaskCancelHandler = () =>{
         this.setState({taskediting : false});
+    }
+
+    getTaskbyId = (id) => {
+        return this.state.tasks.find((task) => task.id === id);
+       
     }
 
     taskStatusChanged = (id) => {
@@ -53,7 +60,7 @@ class TasksOverview extends Component{
              <Modal 
                     show = {this.state.taskediting}
                     modalClosed = {this. editTaskCancelHandler}>
-                    <TaskEditForm todo ="tests text" />
+                    <TaskEditForm task = {this.getTaskbyId(this.state.taskEditId)} />
                    <p>modal window test</p>
             </Modal>
             <div className = {classes.Daily}>
