@@ -4,10 +4,9 @@ import classes from './TaskEditForm.module.css';
  
 const taskeditform = ({task})=>{
 
-
    return(
     <div>
-        <input type="text" value ={task.todo} readOnly={true} />
+        <textarea className = {classes.TaskText} value ={task.todo} />    
     </div>
 
    )
