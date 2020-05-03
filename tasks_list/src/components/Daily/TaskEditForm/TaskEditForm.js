@@ -1,16 +1,44 @@
-import React from 'react';
+import React, { Component } from 'react';
 import classes from './TaskEditForm.module.css';
+import { render } from 'react-dom';
 
  
-const taskeditform = ({task})=>{
+export default class taskeditform extends Component {
 
+
+constructor(props) {
+    super(props);
+    this.state = 
+    {todotext: this.props.task.todo};  
+}
+
+
+onLabelChange = (e) => {
+
+    this.props.editTaskText(this.props.task.id, e.target.value);
+  }; 
+
+  onSubmit = (e) => {
+    e.preventDefault();
+   
+  };
+
+
+render(){
+   console.log("taskEditForm");
+    console.log(this.props.task.todo);
    return(
-    <div>
-        <textarea className = {classes.TaskText} value ={task.todo} />    
-    </div>
+      
+    <form  onSubmit = {this.onSubmit}>
+        <textarea 
+            className = {classes.TaskText} 
+            onChange={this.onLabelChange}
+            //value = {this.state.todotext}
+            value = {this.props.task.todo}
+            />    
+    </form>
 
    )
-    
+} 
 };
 
-export default taskeditform;

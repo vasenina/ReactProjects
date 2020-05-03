@@ -27,17 +27,30 @@ class TasksOverview extends Component{
     
     editTaskHandler = (id) => {
         this.setState({taskediting : true , taskEditId: id});
-
     }
 
     editTaskCancelHandler = () =>{
         this.setState({taskediting : false});
     }
 
+    editTaskText = (id, text)=>{
+        this.setState(({tasks}) => {
+        const idx = this.state.tasks.findIndex((task) => task.id === id);
+        const task = this.state.tasks[idx];
+        const newTask = {...task, todo: text};
+
+        tasks = [
+            ...this.state.tasks.slice(0, idx),
+            newTask,
+            ...this.state.tasks.slice(idx+1)
+        ];
+        return {tasks};
+    });
+    }
+
     getTaskbyId = (id) => {
+        console.log(id, this.state.taskEditId);
         return this.state.tasks.find((task) => task.id === id);
-        
-       
     }
 
     taskStatusChanged = (id) => {
@@ -56,12 +69,22 @@ class TasksOverview extends Component{
     
 
     render(){
+        console.log("Task Overview");
+        console.log(this.state.tasks);
+        console.log(this.getTaskbyId(this.state.taskEditId));
+        console.log("End Task Overview");
         return(
         <Aux>   
              <Modal 
                     show = {this.state.taskediting}
-                    modalClosed = {this. editTaskCancelHandler}>
-                    <TaskEditForm task = {this.getTaskbyId(this.state.taskEditId)} />
+                    modalClosed = {this. editTaskCancelHandler}
+                    task = {this.getTaskbyId(this.state.taskEditId)}
+                    >
+                    <TaskEditForm 
+                        key = {this.state.taskEditId}
+                        task = {this.getTaskbyId(this.state.taskEditId)}
+                        editTaskText = {this.editTaskText} />
+                 
                    <p>modal window test</p>
             </Modal>
             <div className = {classes.Daily}>

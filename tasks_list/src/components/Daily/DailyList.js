@@ -15,7 +15,7 @@ const dailyList = (props) =>props.tasks.map((task, index) =>{
     done = {task.done}
     color = {props.types[task.type].color}
     key = {task.id}
-    editing = {(event)=> {
+    editing = {()=> {
       props.editing(task.id)
     }}
     />
