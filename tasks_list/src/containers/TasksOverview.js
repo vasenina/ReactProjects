@@ -22,11 +22,16 @@ class TasksOverview extends Component{
               work: {color: '#50a7ec'},
           },
         taskediting: false,
+        taskadding: false,
         taskEditId: 't1',
     }
     
     editTaskHandler = (id) => {
         this.setState({taskediting : true , taskEditId: id});
+    }
+
+    addTaskHandler = () => {
+        this.setState({taskadding: true, taskediting : true});
     }
 
     editTaskCancelHandler = () =>{
@@ -46,6 +51,23 @@ class TasksOverview extends Component{
         ];
         return {tasks};
     });
+    }
+
+    addNewTask = (text)=>{
+        this.setState ((tasks, type)=>{
+            const newTask = {
+                id: '', 
+                todo: text, 
+                type: 'work',
+                done: false};
+
+            tasks = [
+                ...this.state.tasks,
+                newTask,
+            ];
+            return{ tasks};
+        }
+        )
     }
 
     getTaskbyId = (id) => {
@@ -69,10 +91,7 @@ class TasksOverview extends Component{
     
 
     render(){
-        console.log("Task Overview");
-        console.log(this.state.tasks);
-        console.log(this.getTaskbyId(this.state.taskEditId));
-        console.log("End Task Overview");
+       
         return(
         <Aux>   
              <Modal 
@@ -83,9 +102,10 @@ class TasksOverview extends Component{
                     <TaskEditForm 
                         key = {this.state.taskEditId}
                         task = {this.getTaskbyId(this.state.taskEditId)}
-                        editTaskText = {this.editTaskText} />
-                 
-                   <p>modal window test</p>
+                        editTaskText = {this.editTaskText}
+                        adding = {this.taskadding}
+                        addnewTask = {this.addNewTask}
+                         />
             </Modal>
             <div className = {classes.Daily}>
                 <p>Daily tasks</p>
@@ -95,6 +115,8 @@ class TasksOverview extends Component{
                     types= {this.state.types} 
                     checked = {this.taskStatusChanged} 
                     editing = {this.editTaskHandler}/>
+
+                <button className = {classes.NewTask} onClick = {this.addTaskHandler}>+ New Habit +</button>
             </div>
             <div className = {classes.Weekly}>
                 <p>Weekly tasks</p>

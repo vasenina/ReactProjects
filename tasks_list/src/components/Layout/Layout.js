@@ -8,8 +8,7 @@ const layout = (props) =>(
   <Aux>
         <div > 
             <div className = {classes.ControlPanel}>
-                <p>add new task</p>
-                <p>calender</p> 
+                    <button className = {classes.Stats} >Statistic</button>
             </div>
             <div className = {classes.Tasks}>
             <TasksOverview />
