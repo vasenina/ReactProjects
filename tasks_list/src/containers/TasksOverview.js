@@ -6,6 +6,7 @@ import Aux from '../hoc/Aux';
 import Modal from '../components/UI/Modal/Modal';
 import classes from './TaskOverview.module.css';
 import TaskEditForm from '../components/Daily/TaskEditForm/TaskEditForm';
+import TaskNewForm from '../components/Daily/TaskNewForm/TaskNewForm';
 
 
 class TasksOverview extends Component{
@@ -31,7 +32,11 @@ class TasksOverview extends Component{
     }
 
     addTaskHandler = () => {
-        this.setState({taskadding: true, taskediting : true});
+        this.setState({taskadding: true});
+    }
+
+    addTaskCancelHandler = () =>{
+        this.setState({taskadding : false});
     }
 
     editTaskCancelHandler = () =>{
@@ -97,14 +102,23 @@ class TasksOverview extends Component{
              <Modal 
                     show = {this.state.taskediting}
                     modalClosed = {this. editTaskCancelHandler}
-                    task = {this.getTaskbyId(this.state.taskEditId)}
+                    //task = {this.getTaskbyId(this.state.taskEditId)}
                     >
                     <TaskEditForm 
                         key = {this.state.taskEditId}
                         task = {this.getTaskbyId(this.state.taskEditId)}
                         editTaskText = {this.editTaskText}
-                        adding = {this.taskadding}
-                        addnewTask = {this.addNewTask}
+                         />
+            </Modal>
+            <Modal 
+                    show = {this.state.taskadding}
+                    modalClosed = {this. addTaskCancelHandler}
+                    //task = {this.getTaskbyId(this.state.taskEditId)}
+                    >
+                    <TaskNewForm 
+                        key = {this.state.taskEditId}
+                       // task = {this.getTaskbyId(this.state.taskEditId)}
+                        editTaskText = {this.editTaskText}
                          />
             </Modal>
             <div className = {classes.Daily}>
