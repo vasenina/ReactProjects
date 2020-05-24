@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classes from './TaskEditForm.module.css';
-import { render } from 'react-dom';
+import Calendar from './../Calendar/Calendar';
+//import { render } from 'react-dom';
 
  
 export default class taskeditform extends Component {
@@ -33,6 +34,8 @@ render(){
             //value = {this.state.todotext}
             value =  {this.props.task.todo}
             />    
+            Current strike : 7 days 
+            <Calendar />
     </form>
 
    )
