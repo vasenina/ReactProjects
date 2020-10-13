@@ -25,6 +25,7 @@ class TasksOverview extends Component{
         taskediting: false,
         taskadding: false,
         taskEditId: 't1',
+        idCount: 3
     }
     
     editTaskHandler = (id) => {
@@ -38,8 +39,6 @@ class TasksOverview extends Component{
     addTaskCancelHandler = () =>{
         this.setState({taskadding : false});
     }
-
-  
 
     editTaskCancelHandler = () =>{
         this.setState({taskediting : false});
@@ -56,24 +55,27 @@ class TasksOverview extends Component{
             newTask,
             ...this.state.tasks.slice(idx+1)
         ];
+
         return {tasks};
     });
     }
 
     addNewTask = (text)=>{
         
-        this.setState ((tasks)=>{
+        this.setState ((tasks, tasksCount)=>{
+            const counter = this.state.idCount+1
             const newTask = {
-                id: '', 
+                id: 't'+ String(counter), 
                 todo: text, 
                 type: 'work',
                 done: false};
-
             tasks = [
                 ...this.state.tasks,
                 newTask,
             ];
-            return{tasks, taskadding:false};
+
+           // tasksCount: this.state.tasksCount+1;
+            return{tasks, taskadding:false, idCount: counter};
         }
         )
     }
