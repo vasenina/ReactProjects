@@ -1,12 +1,24 @@
+.Header{
+    background-color: lightskyblue;
+    height: 40px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    
+    z-index: 1000;
+}
+
 .ControlPanel{
     width: 25%;
     background-color: blue;
     float: left;
+    padding-top: 40px;
 }
 
 .Tasks{
     width: 75%;
     float: left;
+    padding-top: 40px;
 }
 
 .Stats{
