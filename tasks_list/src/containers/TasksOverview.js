@@ -4,9 +4,11 @@ import Dailylist from '../components/Daily/DailyList';
 import Date from '../components/Daily/Date/Date';
 import Aux from '../hoc/Aux';
 import Modal from '../components/UI/Modal/Modal';
+import ProgressBar from '../components/UI/ProgressBar/ProgressBar';
 import classes from './TaskOverview.module.css';
 import TaskEditForm from '../components/Daily/TaskEditForm/TaskEditForm';
 import TaskNewForm from '../components/Daily/TaskNewForm/TaskNewForm';
+
 
 
 class TasksOverview extends Component{
@@ -128,8 +130,9 @@ class TasksOverview extends Component{
                          />
             </Modal>
             <div className = {classes.Daily}>
-                <p>Daily tasks</p>
+                <p className = {classes.DailyTitle}>Daily tasks</p>
                 <Date />
+                <ProgressBar  completed = {80}/>
                 <Dailylist 
                     tasks = {this.state.tasks} 
                     types= {this.state.types} 

@@ -2,9 +2,11 @@
     width: 60%;
     background-color:lightgrey;
     float: left;
-    text-align: center;
+}
 
-
+.DailyTitle{
+    text-align:center;
+    color: #086969;
 }
 
 .Weekly{
