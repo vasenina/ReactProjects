@@ -53,7 +53,7 @@ input[type='checkbox']:before {
 input[type='checkbox']:checked:before {
     line-height: 1.5em;
     content: '✔';
-    color: green;
+    color:#18B518;
     text-align: center;
     border: 1px solid rgb(224,224,224);
     z-index: 10;
@@ -63,5 +63,5 @@ input[type='checkbox']:checked:before {
 
 input[type='checkbox']:hover:before {
    
-       border: 1px solid green;
+       border: 1px solid #18B518;
     }

@@ -83,7 +83,7 @@ class TasksOverview extends Component{
     }
 
     getTaskbyId = (id) => {
-        console.log(id, this.state.taskEditId);
+       // console.log(id, this.state.taskEditId);
         return this.state.tasks.find((task) => task.id === id);
     }
 
@@ -103,7 +103,11 @@ class TasksOverview extends Component{
     
 
     render(){
-       
+       let tasksfortoday = this.state.tasks.length;
+       const tasksDone = (this.state.tasks.filter(task => task['done'] === true)).length;
+       console.log('tasks '+ tasksDone+'/'+ tasksfortoday);
+
+
         return(
         <Aux>   
              <Modal 
@@ -132,7 +136,7 @@ class TasksOverview extends Component{
             <div className = {classes.Daily}>
                 <p className = {classes.DailyTitle}>Daily tasks</p>
                 <Date />
-                <ProgressBar  completed = {80}/>
+                <ProgressBar  completed = {tasksDone} all = {tasksfortoday}/>
                 <Dailylist 
                     tasks = {this.state.tasks} 
                     types= {this.state.types} 
