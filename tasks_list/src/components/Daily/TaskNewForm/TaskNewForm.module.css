@@ -1,0 +1,9 @@
+
+.TaskText{
+    width: 95%;
+    border-color: white;
+    box-shadow: none;
+    border-style: none;
+    resize: none;
+    margin: 0 auto;
+}

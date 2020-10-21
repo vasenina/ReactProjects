@@ -1,0 +1,46 @@
+.Main{
+    margin : 6px auto;
+
+}
+
+.Weekday{
+
+    text-align: center;
+    height: 40px;
+    font-size: 0.5em;
+    color: gray;
+    padding: 2px;
+
+}
+
+.Day {
+    padding: 4px;
+    margin: 8px 4px;
+    background-color: lightseagreen;
+    border-radius: 50%;
+    text-align: center;
+    color: black;
+}
+
+.Day_empty{
+    background-color: none;
+}
+.Day_done{
+    background-color: lightgreen;
+}
+.Day_todo{
+    background-color: lightyellow;
+}
+.Day_failed{
+    background-color: lightsalmon;
+}
+.Day_today{
+    color: red;
+}
+
+
+
+.Calendar{
+    border-spacing:  0px 10px;
+    border-collapse: separate;
+}
