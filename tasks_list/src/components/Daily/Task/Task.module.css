@@ -2,10 +2,10 @@
     width: 80%;
     position: relative;
     border-radius: 8px;
-    border: thin solid gray;
+  
     padding: 16px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    margin: 4px auto;
+    background-color: white;
+    margin: 10px auto;
    }
 
 .Task:hover {
@@ -13,7 +13,7 @@
 }
 
 .Task_done{
-    background: gray;
+    background:#879292;
     text-decoration: line-through;
 }
 

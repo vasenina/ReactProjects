@@ -7,9 +7,14 @@ const task = (props)=>{
    
     let classNames = classes.Task ;
     let style = {};
+    //let border =props.color;
+    let back =  props.color;
     (props.done) ? 
       (classNames += ' ' + classes.Task_done ):
-      (style = {background: props.color});
+      (style = {background: back});
+      //(style = {'border-color': border});
+      //border-color:
+      //(style = {background: props.color});
     
     
         return(

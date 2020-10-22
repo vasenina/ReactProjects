@@ -21,8 +21,8 @@ class TasksOverview extends Component{
           ],
 
           types: {
-              sport: { color: '#625cc9'},
-              work: {color: '#50a7ec'},
+              sport: { color: '#49A8A8'},
+              work: {color: '#FFB06F'},
           },
         taskediting: false,
         taskadding: false,
