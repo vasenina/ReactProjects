@@ -10,21 +10,30 @@
 
 .ControlPanel{
     width: 25%;
-    background-color: blue;
+   
     float: left;
     padding-top: 40px;
 }
 
 .Tasks{
     width: 75%;
+    height: 100%;
     float: left;
     padding-top: 40px;
 }
 
 .Stats{
+   
     width: 80%;
-    margin: 10px auto;
+    position: relative;
+    border-radius: 8px;
+    border: thin solid gray;
+    padding: 16px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 20px 20px ;
     
+    background-color: white;
+    text-align: left; 
 }
 
 

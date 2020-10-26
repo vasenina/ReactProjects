@@ -142,12 +142,13 @@ class TasksOverview extends Component{
                     types= {this.state.types} 
                     checked = {this.taskStatusChanged} 
                     editing = {this.editTaskHandler}/>
-                <div className = {classes.AddNewTask}>
-                <button className = {classes.NewTask} onClick = {this.addTaskHandler}>+ New Habit +</button>
-                </div>
+                
             </div>
             <div className = {classes.Weekly}>
-                <p>Weekly tasks</p>
+            <div className = {classes.AddNewTask}>
+                <button className = {classes.NewTask} onClick = {this.addTaskHandler}>+ New Habit +</button>
+                </div>
+              
             </div>
         </Aux>
         );
