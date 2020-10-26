@@ -9,11 +9,13 @@
    }
 
 .Task:hover {
-    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+   /* box-shadow: 0 0 10px rgba(0,0,0,0.8);*/
+   opacity: 0.8;
 }
 
 .Task_done{
     background:#879292;
+    opacity: 0.7;
     text-decoration: line-through;
 }
 
@@ -21,23 +23,20 @@
 input[type=checkbox], label{
     vertical-align: middle;
     z-index: 10;
-
+    border-radius: 50%;
+    
 }
-
 
 input[type=checkbox]{
    
     cursor: pointer;
     width: 2em;
     height: 2em; 
-    
+    /*border-radius: 50%;*/
     margin-right: 7px; 
     z-index: 10;
-   
+    
 }
-
-
-
 
 input[type='checkbox']:before {
    
@@ -48,6 +47,7 @@ input[type='checkbox']:before {
     background: rgb(224,224,224);
     border: 1px solid rgb(224,224,224);
     z-index: 10;
+    /*border-radius: 50%;*/
     }
 
 input[type='checkbox']:checked:before {
@@ -56,12 +56,13 @@ input[type='checkbox']:checked:before {
     color:#18B518;
     text-align: center;
     border: 1px solid rgb(224,224,224);
+    /*border-radius: 50%;*/
     z-index: 10;
-
 }
 
 
 input[type='checkbox']:hover:before {
    
        border: 1px solid #18B518;
+       /*border-radius: 50%;*/
     }

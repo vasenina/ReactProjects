@@ -1,6 +1,6 @@
 .Daily{
     width: 60%;
-    background-color:#D0F5F5;
+    background: linear-gradient(to right, #FFFFFF 0% , #D0F5F5 ,#D0F5F5 50%, #FFFFFF 100%);
     float: left;
 }
 
