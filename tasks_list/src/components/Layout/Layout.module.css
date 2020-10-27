@@ -24,16 +24,22 @@
 
 .Stats{
    
-    width: 80%;
+    width: 200px;
+    height: 60px;
     position: relative;
     border-radius: 8px;
-    border: thin solid gray;
+    border: 4px solid #2C9191;
     padding: 16px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    margin: 20px 20px ;
-    
+  
+    margin: 20px 50px ;
     background-color: white;
-    text-align: left; 
+    text-align: center; 
+    float:right;
+    border-radius: 10px 10px 10px 2px;
+
+}
+.Stats:hover{
+    background-color:wheat;
 }
 
 

@@ -8,7 +8,7 @@ const layout = (props) =>(
   <Aux>
 
     <div className = {classes.Header}>
-    </div>
+    </div> 
         <div > 
             <div className = {classes.ControlPanel}>
                     <button className = {classes.Stats} >Statistic</button>
